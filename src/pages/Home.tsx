@@ -25,7 +25,7 @@ export const Home = () => {
               Explore a diverse selection from domestic to exotic animals, all
               from trusted sources.
             </p>
-            <Button css="bg-green text-white text-[24px] max-xl:text-[18px]  font-extrabold hover:bg-green/90 transition-colors">
+            <Button css="bg-green text-white text-[24px] max-xl:text-[18px]  font-extrabold hover:bg-dark-green  transition-colors">
               BROWSE ANIMALS
             </Button>
           </div>
@@ -208,7 +208,7 @@ export const Home = () => {
             />
           </div>
           <div className="flex justify-center pt-[80px]">
-            <Button css="bg-white font-vietnam text-green px-[48px] py-[16px] text-[20px] font-normal hover:bg-white/90 transition-colors rounded-full">
+            <Button css="bg-white font-vietnam text-green px-[48px] py-[16px] text-[20px] font-normal hover:bg-dark-green hover:text-white transition-colors rounded-full">
               BROWSE ANIMALS
             </Button>
           </div>

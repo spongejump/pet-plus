@@ -127,7 +127,7 @@ export const Slider = ({ slides }: SliderProps) => {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className={`absolute left-[0px] top-[100px] translate-x-[-10%]  w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white rounded-r-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
+        className={`absolute left-[0px] top-[100px] translate-x-[-10%]  w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
           leftActive ? "scale-90 bg-green-100" : ""
         }`}
         aria-label="Previous"
@@ -168,7 +168,7 @@ export const Slider = ({ slides }: SliderProps) => {
                 />
                 {/* Read more button, shown on hover */}
                 <button
-                  className="absolute left-1/2 -translate-x-1/2 bottom-4 bg-white/90 text-green text-[16px] font-medium px-4 py-1 rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-200 shadow"
+                  className="absolute left-1/2 -translate-x-1/2 bottom-4 bg-white/90  text-green text-[16px] font-medium px-4 py-1 rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-200 shadow"
                   style={{
                     pointerEvents: hoveredIdx === idx ? "auto" : "none",
                   }}
@@ -196,7 +196,7 @@ export const Slider = ({ slides }: SliderProps) => {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className={`absolute right-[0px] top-[100px] translate-x-[10%]  w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-[#ECECEF] rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
+        className={`absolute right-[0px] top-[100px] translate-x-[10%]  w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
           rightActive ? "scale-90 bg-green-100" : ""
         }`}
         aria-label="Next"
