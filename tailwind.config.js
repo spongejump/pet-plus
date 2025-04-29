@@ -8,6 +8,14 @@ module.exports = {
       fontFamily: {
         'vietnam': ['"Be Vietnam Pro"', 'sans-serif'],
       },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
+      },
       letterSpacing: {
         'custom': '0.05em',
       },

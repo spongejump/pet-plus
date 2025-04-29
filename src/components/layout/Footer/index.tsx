@@ -60,7 +60,7 @@ export const Footer = () => {
               </a>
             </div>
             <div className="pt-4">
-              <p className="text-[12px] text-[#151618] font-light">
+              <p className="text-[12px] text-[#151618] font-vietnam font-light">
                 © Copyright, PetsandPlus. All Rights Reserved.
               </p>
             </div>
@@ -81,7 +81,7 @@ export const Footer = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-gray-600 hover:text-[#008264] transition-colors text-[14px] max-lg:text-[13px] font-light whitespace-nowrap"
+                        className="text-gray-600 hover:text-[#008264] transition-colors text-[14px] max-lg:text-[13px] font-vietnam font-light whitespace-nowrap"
                       >
                         {link.label}
                       </a>

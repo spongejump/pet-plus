@@ -84,7 +84,7 @@ export const Header = ({ variant = "home" }: HeaderProps) => {
               placeholder="Search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-[445px] max-2xl:w-[360px] max-xl:w-[260px] max-lg:w-[180px] max-md:w-[160px] h-[60px] max-2xl:h-[50px] max-lg:h-[36px] rounded-[235px] border border-[#D6D6D6] outline-none pl-6 max-2xl:pl-4 pr-12 max-2xl:pr-10  font-light text-[16px] max-2xl:text-[14px] max-lg:text-[11px]"
+              className="w-[445px] max-2xl:w-[360px] max-xl:w-[260px] max-lg:w-[180px] max-md:w-[160px] h-[60px] max-2xl:h-[50px] max-lg:h-[36px] rounded-[235px] border border-[#D6D6D6] outline-none pl-6 max-2xl:pl-4 pr-12 max-2xl:pr-10  font-vietnam font-light text-[16px] max-2xl:text-[14px] max-lg:text-[11px]"
             />
             <button className="absolute right-5 max-2xl:right-4 top-1/2 -translate-y-1/2">
               <svg
@@ -169,7 +169,7 @@ export const Header = ({ variant = "home" }: HeaderProps) => {
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full h-[40px] rounded-[235px] border border-gray-200 outline-none pl-4 pr-8 font-light text-sm"
+                className="w-full h-[40px] rounded-[235px] border border-gray-200 outline-none pl-4 pr-8 font-vietnam font-light text-sm"
               />
               <button className="absolute right-3 top-1/2 -translate-y-1/2">
                 <svg

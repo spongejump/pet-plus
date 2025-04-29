@@ -30,7 +30,7 @@ export const Articles = ({ image, title, content }: ArticlesProps) => {
         <h2 className="font-vietnam font-extrabold text-[30px] text-white">
           {title}
         </h2>
-        <p className="text-[18px] text-white font-light max-w-[400px] text-center">
+        <p className="text-[18px] text-white font-vietnam font-light max-w-[400px] text-center">
           {content}
         </p>
       </div>
@@ -116,9 +116,9 @@ export const Slider = ({ slides }: SliderProps) => {
   // Responsive slide width
   useEffect(() => {
     if (typeof window !== "undefined") {
-      if (window.innerWidth < 640) setSlideWidth(280);
-      else if (window.innerWidth < 1024) setSlideWidth(320);
-      else setSlideWidth(380);
+      if (window.innerWidth < 640) setSlideWidth(320);
+      else if (window.innerWidth < 1024) setSlideWidth(360);
+      else setSlideWidth(400);
     }
   }, [visibleCount]);
 
@@ -127,7 +127,7 @@ export const Slider = ({ slides }: SliderProps) => {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className={`absolute left-[0px] top-[100px] translate-x-[-10%]  w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
+        className={`absolute left-[0px] top-[100px] translate-x-[-40%] max-sm:translate-x-0 w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
           leftActive ? "scale-90 bg-green-100" : ""
         }`}
         aria-label="Previous"
@@ -155,36 +155,35 @@ export const Slider = ({ slides }: SliderProps) => {
           {extendedSlides.map((slide, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 bg-white rounded-[24px] shadow-lg p-0 group cursor-pointer transition-transform duration-200 hover:scale-105"
+              className="flex-shrink-0 bg-white rounded-[24px] p-0 group cursor-pointer transition-transform duration-200"
               style={{ width: `${slideWidth}px` }}
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
-              <div className="relative">
-                <img
+              <div className="relative  bg-white-green rounded-[15px]">
+                <Image
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full h-[180px] md:h-[220px] lg:h-[260px] object-cover rounded-t-[24px]"
+                  css="  object-cover rounded-t-[24px]"
                 />
-                {/* Read more button, shown on hover */}
-                <button
+                {/* <button
                   className="absolute left-1/2 -translate-x-1/2 bottom-4 bg-white/90  text-green text-[16px] font-medium px-4 py-1 rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-200 shadow"
                   style={{
                     pointerEvents: hoveredIdx === idx ? "auto" : "none",
                   }}
                 >
                   Read More...
-                </button>
+                </button> */}
               </div>
               <div className="py-8 px-4">
                 <h3
-                  className={`font-vietnam font-normal text-[24px] mb-3 transition-colors duration-200 ${
+                  className={`font-vietnam font-semibold text-[24px] mb-3 transition-colors duration-200 ${
                     hoveredIdx === idx ? "text-green" : "text-dark"
                   }`}
                 >
                   {slide.title}
                 </h3>
-                <p className="text-[18px]  text-dark font-light max-w-[320px]">
+                <p className="text-[18px]  text-dark font-vietnam font-light">
                   {slide.content}
                 </p>
               </div>
@@ -196,7 +195,7 @@ export const Slider = ({ slides }: SliderProps) => {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className={`absolute right-[0px] top-[100px] translate-x-[10%]  w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
+        className={`absolute right-[0px] top-[100px] translate-x-[40%] max-sm:translate-x-0 w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
           rightActive ? "scale-90 bg-green-100" : ""
         }`}
         aria-label="Next"

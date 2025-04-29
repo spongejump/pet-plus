@@ -1,3 +1,5 @@
+import { Image } from "./Image";
+
 interface ProcessProps {
   source: string;
   title: string;
@@ -8,24 +10,16 @@ interface ProcessProps {
 export const Process = ({ title, content, source, css }: ProcessProps) => {
   return (
     <div
-      className={`${css} flex flex-col items-center bg-light-green h-[560px] w-[280px] rounded-[142px]`}
+      className={`${css} relative w-[370px] h-[590px] max-[480px]:w-full max-[480px]:h-full`}
     >
-      <div className="flex w-[350px] h-[350px] flex-col pt-[60px]">
-        <div className="w-full h-full">
-          <img
-            src={source}
-            alt={title}
-            className="w-full h-full object-contain"
-          />
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <h3 className="text-[30px] font-vietnam font-bold text-black text-center">
-            {title}
-          </h3>
-          <p className="text-[18px] text-black font-light mt-[5px] text-center max-w-[300px]">
-            {content}
-          </p>
-        </div>
+      <Image src={source} alt={title} css="w-full h-full object-contain" />
+      <div className="absolute top-[70%] left-1/2 -translate-x-1/2 w-[300px]">
+        <h3 className="text-[30px] font-vietnam font-bold text-black text-center">
+          {title}
+        </h3>
+        <p className="text-[18px] text-black font-vietnam font-light mt-[5px] text-center w-full">
+          {content}
+        </p>
       </div>
     </div>
   );
