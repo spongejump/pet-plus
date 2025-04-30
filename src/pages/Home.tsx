@@ -14,7 +14,7 @@ export const Home = () => {
       <div className="container mx-auto px-12  max-lg:px-9 max-sm:px-4 pt-[112em]">
         <div className="flex justify-between items-center gap-[88px] max-xl:gap-[40px] max-md:flex-col  max-md:items-center">
           <div className="max-md:flex max-md:flex-col max-md:items-center">
-            <h1 className="font-vietnam whitespace-nowrap font-extrabold text-[90em] max-md:text-[184em] leading-none text-dark max-md:text-center wrap-none">
+            <h1 className="font-vietnam whitespace-nowrap font-extrabold  text-[90px] max-[1920px]:text-[90em] max-md:text-[184em] leading-none text-dark max-md:text-center wrap-none">
               BROWSE
               <br />
               HUNDREDS OF
@@ -30,20 +30,20 @@ export const Home = () => {
             </Button>
           </div>
 
-          <div className=" flex justify-center items-end relative">
-            <Image src={images.animal_lover} alt="" />
+          <div className="flex justify-center items-end relative">
+            <Image src={images.animal_lover} css="" alt="" />
           </div>
         </div>
       </div>
       <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4  pt-[360em] pb-[340em]  relative">
-        <div className="absolute  w-[1110em] h-[905em]  bottom-0 translate-y-[10%] left-12 max-lg:left-[48em]  z-30 max-md:hidden">
-          <Image src={images.man_buyer} alt="" css="" />
+        <div className="absolute  w-[1110em] h-[905em]  bottom-0  translate-y-[10%] left-[-8%] max-[1920px]:left-12 max-lg:left-[48em]  z-30 max-md:hidden">
+          <Image src={images.man_buyer} alt="" css="w-full" />
           <ArrowButton css="absolute bottom-0 right-0 -translate-y-[20%] -translate-x-[20%]" />
         </div>
         <div className="flex max-md:flex-col max-md:gap-10">
           <div className="min-w-[50%] max-md:hidden"></div>
           <div className="">
-            <h1 className="font-vietnam font-extrabold text-[90em]  max-md:text-[184em] leading-none text-dark  whitespace-nowrap max-md:text-center">
+            <h1 className="font-vietnam font-extrabold text-[90px] max-[1920px]:text-[90em]  max-md:text-[184em] leading-none text-dark  whitespace-nowrap max-md:text-center">
               FROM
               <span className="text-green"> VERIFIED</span> <br />
               BREEDERS
@@ -66,7 +66,7 @@ export const Home = () => {
       </div>
       <div className="bg-white-green">
         <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4 pt-[240px] pb-[180px] max-sm:pt-[100px] max-sm:pb-[100px]">
-          <h1 className="text-dark font-vietnam text-[90em]  max-md:text-[184em]  leading-none font-extrabold text-center">
+          <h1 className="text-dark font-vietnam text-[90px] max-[1920px]:text-[90em]  max-md:text-[184em]  leading-none font-extrabold text-center">
             SIMPLE PROCESS
           </h1>
           <p className="font-vietnam font-light text-[34px] max-xl:text-[28px] max-lg:text-[24px] max-[480px]:text-[20px] font-vietnam font-light text-center mt-[8px]">
@@ -97,7 +97,7 @@ export const Home = () => {
       <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4 pt-[112px] pb-[106px]">
         <div className="flex items-center  gap-[85px] max-lg:gap-[24px] max-md:flex-col">
           <div className="max-md:flex max-md:flex-col max-md:items-center">
-            <h1 className="text-[90em] max-md:text-[184em] max-md:text-center font-vietnam font-extrabold leading-none text-dark whitespace-nowrap">
+            <h1 className="text-[90px] max-[1920px]:text-[90em] max-md:text-[184em] max-md:text-center font-vietnam font-extrabold leading-none text-dark whitespace-nowrap">
               BROWSE <br />
               BEYOND PETS
             </h1>
@@ -117,7 +117,7 @@ export const Home = () => {
 
       <div className="bg-green">
         <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4  pt-[95px] pb-[111px]">
-          <h1 className="font-vietnam font-extrabold text-[90em] max-md:text-[184em] text-white text-center">
+          <h1 className="font-vietnam font-extrabold text-[90px] max-[1920px]:text-[90em] max-md:text-[184em] text-white text-center">
             WHY WE STAND OUT
           </h1>
           <div className="flex justify-between gap-5 max-xl:flex-wrap items-start max-xl:gap-10 pt-[52px] max-xl:justify-center">
@@ -146,7 +146,7 @@ export const Home = () => {
       </div>
 
       <div className="container mx-auto px-12  max-lg:px-9 max-sm:px-4 pt-[87px]">
-        <h1 className="font-vietnam font-extrabold text-[90em] max-md:text-[184em] text-dark text-center">
+        <h1 className="font-vietnam font-extrabold text-[90px] max-[1920px]:text-[90em] max-md:text-[184em] text-dark text-center">
           INSIGHTS
         </h1>
         <p className="font-vietnam font-light text-[30px] max-xl:text-[24px] max-lg:text-[20px] text-center text-black mt-[11px]">
@@ -163,7 +163,7 @@ export const Home = () => {
           <div className="flex items-center gap-[40px]">
             <div className="flex-[1_1_45%] max-2xl:flex-[1_1_20%] flex items-center justify-center relative max-xl:hidden"></div>
             <div className="flex-[1_1_55%] max-2xl:flex-[1_1_80%] flex flex-col justify-center items-center px-12 max-sm:px-4">
-              <h2 className="text-dark font-vietnam font-extrabold text-[60em] max-md:text-[150em] max-sm:text-[30px]">
+              <h2 className="text-dark font-vietnam font-extrabold text-[60px] max-[1920px]:text-[60em] max-md:text-[150em] max-sm:text-[30px]">
                 NEWS & TIPS
               </h2>
               <p className="text-[24px] text-dark mb-9 font-normal text-center max-xl:text-[20px] max-lg:text-[16px]">
@@ -195,14 +195,14 @@ export const Home = () => {
             </div>
           </div>
           <div className="w-[480em] h-[564em] absolute bottom-0 left-[10%] max-2xl:left-0 max-xl:hidden">
-            <Image src={images.horse} alt="" css="" />
+            <Image src={images.horse} alt="" css="w-full" />
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-12 pt-[170px] max-lg:pt-[100px] flex gap-[120px] max-xl:gap-[60px] items-start max-lg:flex-col">
         <div className="">
-          <h1 className="text-[90em] max-md:text-[184em] font-vietnam font-extrabold text-dark">
+          <h1 className="text-[90px] max-[1920px]:text-[90em] max-md:text-[184em] font-vietnam font-extrabold text-dark">
             POPULAR <br /> CHOICES{" "}
           </h1>
           <p className="text-black text-[30px] max-xl:text-[24px] max-lg:text-[20px]  font-medium pt-[14px]">
