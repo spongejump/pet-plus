@@ -25,7 +25,7 @@ export const Home = () => {
               Explore a diverse selection from domestic to exotic animals, all
               from trusted sources.
             </p>
-            <Button css="bg-green text-white text-[24em] max-xl:text-[18px] font-extrabold hover:bg-dark-green  transition-colors">
+            <Button css="bg-green font-vietnam text-white px-[48px] py-[16px] text-[20px] font-extrabold hover:bg-dark-green hover:text-white transition-colors rounded-full">
               BROWSE ANIMALS
             </Button>
           </div>
@@ -105,7 +105,7 @@ export const Home = () => {
               Explore a wide range of animals beyond just pets. Discover
               livestock, exotic species, and more!
             </p>
-            <Button css="bg-green text-white text-[24em] max-xl:text-[18px] font-extrabold hover:bg-dark-green  transition-colors">
+            <Button css="bg-green font-vietnam text-white px-[48px] py-[16px] text-[20px] font-extrabold hover:bg-dark-green hover:text-white transition-colors rounded-full">
               BROWSE ANIMALS
             </Button>
           </div>
