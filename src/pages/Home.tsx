@@ -240,7 +240,7 @@ export const Home = () => {
       </div>
 
       <div className="container mx-auto px-12 pt-[180px] max-lg:pt-[100px] pb-[90px] flex flex-col items-center">
-        <h1 className="text-green text-center text-[40em] max-lg:text-[60em] max-sm:text-[20px] font-extrabold font-vietnam">
+        <h1 className="text-green text-center text-[40px] max-[1920px]:text-[40em] max-lg:text-[60em] max-sm:text-[20px] font-extrabold font-vietnam">
           JOIN AS A SELLER
         </h1>
         <p className="text-black  text-[24px] max-xl:text-[20px] max-lg:text-[16px] font-medium font-vietnam text-center">
