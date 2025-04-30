@@ -35,8 +35,8 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4  pt-[360em] pb-[340em]  relative">
-        <div className="absolute  w-[1110em] h-[905em]  bottom-0  translate-y-[10%] left-[-8%] max-[1920px]:left-12 max-lg:left-[48em]  z-30 max-md:hidden">
+      <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4  pt-[360px] max-[1920px]:pt-[360em] pb-[340px] max-[1920px]:pb-[340em]  relative">
+        <div className="absolute  w-[1110px] h-[905px] max-[1920px]:w-[1110em] max-[1920px]:h-[905em]  bottom-0  translate-y-[10%] max-[1920px]:left-12 max-lg:left-[48em]  z-30 max-md:hidden">
           <Image src={images.man_buyer} alt="" css="w-full" />
           <ArrowButton css="absolute bottom-0 right-0 -translate-y-[20%] -translate-x-[20%]" />
         </div>
@@ -194,7 +194,7 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className="w-[480em] h-[564em] absolute bottom-0 left-[10%] max-2xl:left-0 max-xl:hidden">
+          <div className=" w-[480px] h-[564px] max-[1920px]:w-[480em] max-[1920px]:h-[564em] absolute bottom-0 left-[10%] max-2xl:left-0 max-xl:hidden">
             <Image src={images.horse} alt="" css="w-full" />
           </div>
         </div>
