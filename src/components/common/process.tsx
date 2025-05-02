@@ -7,7 +7,7 @@ interface ProcessProps {
   css?: string;
 }
 
-export const Process = ({ title, content, source, css }: ProcessProps) => {
+export default function Process({ title, content, source, css }: ProcessProps) {
   return (
     <div
       className={`${css} relative w-[370px] h-[590px] max-[480px]:w-full max-[480px]:h-full`}
@@ -23,4 +23,4 @@ export const Process = ({ title, content, source, css }: ProcessProps) => {
       </div>
     </div>
   );
-};
+}

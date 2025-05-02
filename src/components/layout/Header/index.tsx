@@ -3,6 +3,7 @@ import { images } from "../../../constants/images";
 import { navItems } from "../../../constants/navigation";
 import { NavItemsKey } from "../../../types/navigation";
 import { HeaderProps } from "../../../types/header";
+import { Image } from "../../common/Image";
 
 export const Header = ({ variant = "home" }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -52,10 +53,10 @@ export const Header = ({ variant = "home" }: HeaderProps) => {
                   className="font-vietnam font-extrabold text-[18px] max-2xl:text-[16px] max-xl:text-[14px] max-lg:text-[12px] leading-none tracking-custom uppercase text-gray-800 hover:text-[#008264] transition-colors flex items-center gap-1"
                 >
                   {label}
-                  <img
-                    src={images.arrow}
+                  <Image
+                    src={images.bottom_arrow}
                     alt="arrow"
-                    className="w-4 h-4 max-2xl:w-3 max-2xl:h-3 max-lg:w-2 max-lg:h-2"
+                    css="w-4 h-4 max-2xl:w-3 max-2xl:h-3 max-lg:w-2 max-lg:h-2"
                   />
                 </a>
 
@@ -201,10 +202,10 @@ export const Header = ({ variant = "home" }: HeaderProps) => {
                     }
                   >
                     {label}
-                    <img
-                      src={images.arrow}
+                    <Image
+                      src={images.bottom_arrow}
                       alt="arrow"
-                      className={`w-3 h-3 transform transition-transform ${
+                      css={`w-3 h-3 transform transition-transform ${
                         activeDropdown === key ? "rotate-180" : ""
                       }`}
                     />

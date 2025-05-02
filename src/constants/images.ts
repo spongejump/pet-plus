@@ -1,35 +1,32 @@
 export const images = {
+  animal_lover: require("../assets/images/animal_lover.avif"),
+  puppy: require("../assets/images/cute_puppy.avif"),
+  horse: require("../assets/images/horse.avif"),
+  man_buyer: require("../assets/images/man_buyer.svg").default,
+  horse_with_woman: require("../assets/images/horse_with_woman.avif"),
+  puppy_with_woman: require("../assets/images/puppy_with_woman.avif"),
+  animal_group: require("../assets/images/animal_group.avif"),
+
   logo: require("../assets/images/logo.svg").default,
   dark_logo: require("../assets/images/dark_logo.svg").default,
-  animal_lover: require("../assets/images/animal_lover.svg").default,
-  arrow: require("../assets/images/arrow.png"),
-  facebook: require("../assets/images/facebook.png"),
-  instagram: require("../assets/images/instagram.png"),
-  pinterest: require("../assets/images/pinterest.png"),
-  youtube: require("../assets/images/youtube.png"),
-  rabbit: require("../assets/images/rabbit.png"),
-  woman_buyer: require("../assets/images/woman_buyer.png"),
-  man_buyer: require("../assets/images/man_buyer.svg").default,
+
   man_buyer_small: require("../assets/images/man_buyer_small.svg").default,
-  green_rect_item: require("../assets/images/green_rect_item.png"),
-  yellow_rect: require("../assets/images/yellow_rect.png"),
-  yellow_rect_item: require("../assets/images/yellow_rect_item.png"),
+
   search: require("../assets/images/search.svg").default,
   choose: require("../assets/images/choose.svg").default,
   contact: require("../assets/images/contact.svg").default,
-  animal_group: require("../assets/images/animal_group.svg").default,
-  white_right_arrow: require("../assets/images/white_right_arrow.png"),
-  puppy_with_girl: require("../assets/images/puppy_with_girl.png"),
-  puppy_with_woman: require("../assets/images/puppy_with_woman.svg").default,
-  horse_with_woman: require("../assets/images/horse_with_woman.svg").default,
-  puppy: require("../assets/images/cute_puppy.svg").default,
-  horse: require("../assets/images/horse.svg").default,
-  horse_baby: require("../assets/images/horse_baby.png"),
-  cat_baby: require("../assets/images/cat_baby.png"),
-  goat_baby: require("../assets/images/goat_baby.png"),
-  verified_breeders: require("../assets/images/verified_breeders.png"),
-  wide_selection: require("../assets/images/wide_selection.png"),
-  easy_search: require("../assets/images/easy_search.png"),
+
+  easy_search: require("../assets/images/easy_search.svg").default,
+  verified_breeders: require("../assets/images/verified_breeders.svg").default,
+  wide_selection: require("../assets/images/wide_selection.svg").default,
+
+  white_right_arrow: require("../assets/images/white_right_arrow.svg").default,
+  bottom_arrow: require("../assets/images/bottom_arrow.svg").default,
+
+  pinterest: require("../assets/images/pinterest.svg").default,
+  instagram: require("../assets/images/instagram.svg").default,
+  facebook: require("../assets/images/facebook.svg").default,
+  youtube: require("../assets/images/youtube.svg").default,
 } as const;
 
 export default images;

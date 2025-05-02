@@ -1,12 +1,14 @@
 import { Button } from "../components/common/button";
 import { Image } from "../components/common/Image";
-import { Process } from "../components/common/process";
-import { Stand } from "../components/common/stand";
-import { Slider } from "../components/common/articles";
+import { lazy, Suspense } from "react";
 import { images } from "../constants/images";
 import { animals } from "../constants/animals";
 import { slides } from "../constants/slides";
 import { ArrowButton } from "../components/common/arrowButton";
+
+const Process = lazy(() => import("../components/common/process"));
+const Stand = lazy(() => import("../components/common/stand"));
+const Slider = lazy(() => import("../components/common/articles"));
 
 export const Home = () => {
   return (
@@ -38,6 +40,7 @@ export const Home = () => {
       <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4  pt-[360px] max-[1920px]:pt-[360em] pb-[340px] max-[1920px]:pb-[340em]  relative">
         <div className="absolute  w-[1110px] h-[905px] max-[1920px]:w-[1110em] max-[1920px]:h-[905em]  bottom-0  translate-y-[10%] max-[1920px]:left-12 max-lg:left-[48em]  z-30 max-md:hidden">
           <Image src={images.man_buyer} alt="" css="w-full" />
+          <div className="w-[700px] h-[500px] bg-[#fff6df] l-shape"></div>
           <ArrowButton css="absolute bottom-0 right-0 -translate-y-[20%] -translate-x-[20%]" />
         </div>
         <div className="flex max-md:flex-col max-md:gap-10">
@@ -73,23 +76,29 @@ export const Home = () => {
             Enjoy an easy, hassle-free journey from browsing to buying.
           </p>
           <div className="flex justify-between mt-[90px] max-sm:mt-[40px] flex-wrap max-xl:gap-[100px] max-xl:justify-center  max-md:flex-col max-md:gap-[50px] items-center">
-            <Process
-              css="mt-[30px] max-xl:mt-0"
-              title="SEARCH"
-              content="Browse through our diverse listings of pets and animals."
-              source={images.search}
-            />
-            <Process
-              title="CHOOSE"
-              content="Select the pet that best fits your needs and preferences."
-              source={images.choose}
-            />
-            <Process
-              css="mt-[30px] max-xl:mt-0"
-              title="CONTACT"
-              content="Reach out to the seller for more information and to arrange a meeting."
-              source={images.contact}
-            />
+            <Suspense fallback={<div>......</div>}>
+              <Process
+                css="mt-[30px] max-xl:mt-0"
+                title="SEARCH"
+                content="Browse through our diverse listings of pets and animals."
+                source={images.search}
+              />
+            </Suspense>
+            <Suspense fallback={<div>......</div>}>
+              <Process
+                title="CHOOSE"
+                content="Select the pet that best fits your needs and preferences."
+                source={images.choose}
+              />
+            </Suspense>
+            <Suspense fallback={<div>......</div>}>
+              <Process
+                css="mt-[30px] max-xl:mt-0"
+                title="CONTACT"
+                content="Reach out to the seller for more information and to arrange a meeting."
+                source={images.contact}
+              />
+            </Suspense>
           </div>
         </div>
       </div>
@@ -121,21 +130,27 @@ export const Home = () => {
             WHY WE STAND OUT
           </h1>
           <div className="flex justify-between gap-5 max-xl:flex-wrap items-start max-xl:gap-10 pt-[52px] max-xl:justify-center">
-            <Stand
-              image={images.verified_breeders}
-              title="Verified Breeders"
-              content="Shop with confidence, knowing our sellers are checked and verified. This ensures reliable transactions and a safe pet-buying experience."
-            />
-            <Stand
-              image={images.wide_selection}
-              title="Wide Selection"
-              content="Explore a wide selection of animals to find the right one for you. With a range of breeds, ages, and sizes, our wide selection makes it simple to find exactly what you need."
-            />
-            <Stand
-              image={images.easy_search}
-              title="Easy Search"
-              content="Easily find and compare pets using our simple search tools. Filter by breed, age, and more to quickly find and evaluate the best options for your new furry friend.  "
-            />
+            <Suspense fallback={<div>......</div>}>
+              <Stand
+                image={images.verified_breeders}
+                title="Verified Breeders"
+                content="Shop with confidence, knowing our sellers are checked and verified. This ensures reliable transactions and a safe pet-buying experience."
+              />
+            </Suspense>
+            <Suspense fallback={<div>......</div>}>
+              <Stand
+                image={images.wide_selection}
+                title="Wide Selection"
+                content="Explore a wide selection of animals to find the right one for you. With a range of breeds, ages, and sizes, our wide selection makes it simple to find exactly what you need."
+              />
+            </Suspense>
+            <Suspense fallback={<div>......</div>}>
+              <Stand
+                image={images.easy_search}
+                title="Easy Search"
+                content="Easily find and compare pets using our simple search tools. Filter by breed, age, and more to quickly find and evaluate the best options for your new furry friend.  "
+              />
+            </Suspense>
           </div>
           <div className="flex justify-center pt-[80px]">
             <Button css="bg-white font-vietnam text-green px-[48px] py-[16px] text-[20px] font-extrabold hover:bg-dark-green hover:text-white transition-colors rounded-full">
@@ -155,7 +170,9 @@ export const Home = () => {
         <p className="text-green font-vietnam font-light text-[18px] text-center mt-[25px] mb-[73px] text-center underline">
           Read all articles
         </p>
-        <Slider slides={slides} />
+        <Suspense fallback={<div>......</div>}>
+          <Slider slides={slides} />
+        </Suspense>
       </div>
 
       <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4 pt-[214px] max-sm:pt-[66px]">
@@ -179,7 +196,7 @@ export const Home = () => {
                       required
                     />
                     <Button
-                      css=" bg-green text-white font-vietnam font-bold text-[16px] sm:text-[18px] px-8 py-4 rounded-full hover:bg-dark-green transition-colors sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2
+                      css=" bg-green text-white font-vietnam font-bold text-[16px] sm:text-[18px] px-[30px] py-[11px] rounded-full hover:bg-dark-green transition-colors absolute right-[6px] top-1/2 -translate-y-1/2
                       "
                     >
                       SUBSCRIBE
@@ -200,9 +217,9 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-12 pt-[170px] max-lg:pt-[100px] flex gap-[120px] max-xl:gap-[60px] items-start max-lg:flex-col">
+      <div className="container mx-auto px-12 pt-[170px] max-lg:pt-[100px] flex gap-[120px] max-xl:gap-[60px] items-start max-lg:flex-col ">
         <div className="">
-          <h1 className="text-[90px] max-[1920px]:text-[90em] max-md:text-[184em] font-vietnam font-extrabold text-dark">
+          <h1 className="text-[90px] max-[1920px]:text-[90em] max-md:text-[184em] font-vietnam font-extrabold text-dark leading-none">
             POPULAR <br /> CHOICES{" "}
           </h1>
           <p className="text-black text-[30px] max-xl:text-[24px] max-lg:text-[20px]  font-medium pt-[14px]">
@@ -215,13 +232,13 @@ export const Home = () => {
             Browse the whole list of pets
           </p>
         </div>
-        <div className="flex justify-between gap-[136px] max-xl:gap-[40px] max-sm:w-full overflow-x-auto scroll-smooth scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+        <div className=" flex justify-between gap-[136px] max-xl:gap-[40px] max-sm:w-full overflow-x-auto scroll-smooth scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pt-[10px]">
           {Object.entries(animals).map(([category, item]) => (
             <div
               key={category}
               className="flex flex-col gap-[12px] whitespace-nowrap"
             >
-              <h3 className="text-dark font-vietnam text-[18px] font-semibold">
+              <h3 className="text-dark font-vietnam text-[18px] font-semibold leading-none">
                 {category}
               </h3>
               <ul className="flex flex-col gap-[12px]">

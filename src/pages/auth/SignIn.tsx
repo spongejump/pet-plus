@@ -5,7 +5,7 @@ export const SignIn = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <img
-          src={require("../../assets/images/dark_logo.png")}
+          src={require("../../assets/images/dark_logo.svg")}
           alt="Pets Plus"
           className="mx-auto h-12 w-auto"
         />

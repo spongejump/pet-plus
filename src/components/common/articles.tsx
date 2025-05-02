@@ -18,27 +18,7 @@ interface SliderProps {
   slides: Slide[];
 }
 
-export const Articles = ({ image, title, content }: ArticlesProps) => {
-  return (
-    <div className="flex flex-col items-center justify-center gap-[40px]">
-      {/* Images Section */}
-      <div className="">
-        <Image src={image} alt={title} />
-      </div>
-      {/* Text Section */}
-      <div className="flex flex-col items-center justify-start gap-[10px]">
-        <h2 className="font-vietnam font-extrabold text-[30px] text-white">
-          {title}
-        </h2>
-        <p className="text-[18px] text-white font-vietnam font-light max-w-[400px] text-center">
-          {content}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export const Slider = ({ slides }: SliderProps) => {
+export default function Slider({ slides }: SliderProps) {
   // Responsive visible count
   const getVisibleCount = () => {
     if (typeof window !== "undefined") {
@@ -127,7 +107,7 @@ export const Slider = ({ slides }: SliderProps) => {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className={`absolute left-[0px] top-[100px] translate-x-[-40%] max-sm:translate-x-0 w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
+        className={`absolute left-[0px] top-[100px] translate-x-[-40%] max-sm:translate-x-0 w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-black-green text-white hover:bg-white hover:text-black rounded-full shadow-[0_0_20px_rgba(162,166,182,0.16)] flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
           leftActive ? "scale-90 bg-green-100" : ""
         }`}
         aria-label="Previous"
@@ -195,7 +175,7 @@ export const Slider = ({ slides }: SliderProps) => {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className={`absolute right-[0px] top-[100px] translate-x-[40%] max-sm:translate-x-0 w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-white hover:bg-light-gray rounded-full shadow flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
+        className={`absolute right-[0px] top-[100px] translate-x-[40%] max-sm:translate-x-0 w-[110px] h-[110px] max-xl:w-[80px] max-xl:h-[80px] max-sm:w-[60px] max-sm:h-[60px] bg-black-green text-white hover:bg-white hover:text-black rounded-full shadow-[0_0_20px_rgba(162,166,182,0.16)] flex items-center justify-center text-2xl z-10 transition-transform duration-100 ${
           rightActive ? "scale-90 bg-green-100" : ""
         }`}
         aria-label="Next"
@@ -204,4 +184,4 @@ export const Slider = ({ slides }: SliderProps) => {
       </button>
     </div>
   );
-};
+}

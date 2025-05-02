@@ -6,7 +6,7 @@ interface StandProps {
   content: string;
 }
 
-export const Stand = ({ image, title, content }: StandProps) => {
+export default function Stand({ image, title, content }: StandProps) {
   return (
     <div className="flex flex-col items-center justify-center gap-[40px]">
       <div className="w-[340px] h-[340px] max-[480px]:w-[300px] max-[480px]:h-[300px]">
@@ -22,4 +22,4 @@ export const Stand = ({ image, title, content }: StandProps) => {
       </div>
     </div>
   );
-};
+}

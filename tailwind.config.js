@@ -24,10 +24,12 @@ module.exports = {
         dark: '#252527',
         black: '#151618',
         green: '#149477',
+        red: '#FF3B30',
         'light-gray': '#ECECEF',
         'light-green': '#DEF7E5',
         'white-green': '#F3F9F8',
         'dark-green':'#177C65',
+        'black-green':'#009476',
         'light-yellow':'#FFF7E3',
         'medium-yellow':'#FDEBBB'
       }

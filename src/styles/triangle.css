@@ -1,0 +1,20 @@
+.concave-triangle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #fff6df;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.concave-triangle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 141.4%; /* 200px * √2 to ensure it covers the hypotenuse */
+  height: 141.4%;
+  background: white; /* Same as your background color */
+  border-radius: 50%;
+  transform: rotate(-45deg) translate(-29.3%, -29.3%);
+  /* The translation is calculated to position the circle correctly */
+} 
