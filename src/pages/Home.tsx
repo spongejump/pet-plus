@@ -40,7 +40,6 @@ export const Home = () => {
       <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4  pt-[360px] max-[1920px]:pt-[360em] pb-[340px] max-[1920px]:pb-[340em]  relative">
         <div className="absolute  w-[1110px] h-[905px] max-[1920px]:w-[1110em] max-[1920px]:h-[905em]  bottom-0  translate-y-[10%] max-[1920px]:left-12 max-lg:left-[48em]  z-30 max-md:hidden">
           <Image src={images.man_buyer} alt="" css="w-full" />
-          <div className="w-[700px] h-[500px] bg-[#fff6df] l-shape"></div>
           <ArrowButton css="absolute bottom-0 right-0 -translate-y-[20%] -translate-x-[20%]" />
         </div>
         <div className="flex max-md:flex-col max-md:gap-10">
@@ -175,35 +174,32 @@ export const Home = () => {
         </Suspense>
       </div>
 
-      <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4 pt-[214px] max-sm:pt-[66px]">
-        <div className="rounded-[25px] bg-white-green pt-[90px] pb-[120px] max-[480px]:py-[40px] relative">
-          <div className="flex items-center gap-[40px]">
+      <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4 pt-[214px] max-sm:pt-[40px]">
+        <div className="rounded-[25px] bg-white-green pt-[90px] pb-[120px] max-sm:pt-[40px] max-sm:pb-[60px] relative">
+          <div className="flex items-center gap-[40px] max-sm:gap-[20px]">
             <div className="flex-[1_1_45%] max-2xl:flex-[1_1_20%] flex items-center justify-center relative max-xl:hidden"></div>
-            <div className="flex-[1_1_55%] max-2xl:flex-[1_1_80%] flex flex-col justify-center items-center px-12 max-sm:px-4">
-              <h2 className="text-dark font-vietnam font-extrabold text-[60px] max-[1920px]:text-[60em] max-md:text-[150em] max-sm:text-[30px]">
+            <div className="flex-[1_1_55%] max-2xl:flex-[1_1_80%] flex flex-col justify-center items-center px-12 max-sm:px-4 max-sm:w-full">
+              <h2 className="text-dark font-vietnam font-extrabold text-[60px] max-[1920px]:text-[60em] max-md:text-[40px] max-sm:text-[32px]">
                 NEWS & TIPS
               </h2>
-              <p className="text-[24px] text-dark mb-9 font-normal text-center max-xl:text-[20px] max-lg:text-[16px]">
+              <p className="text-[24px] text-dark mb-9 font-normal text-center max-xl:text-[20px] max-lg:text-[16px] max-sm:mb-6 max-sm:px-2">
                 Stay in the Loop: Subscribe for pet news and updates!
               </p>
-              <div className="flex flex-col max-w-[600px]">
+              <div className="flex flex-col max-w-[600px] w-full max-sm:px-4">
                 <div className="relative w-full">
-                  <div className="flex max-sm:flex-col  gap-0 max-sm:gap-3 w-full">
+                  <div className="flex max-sm:flex-col gap-0 max-sm:gap-3 w-full">
                     <input
                       type="email"
                       placeholder="Email Address"
-                      className="w-full px-6 py-4 rounded-full border-2 border-green text-[16px] sm:text-[18px] outline-none bg-white sm:pr-[180px] transition-all focus:border-dark-green"
+                      className="w-full px-6 py-4 rounded-full border-2 border-green text-[16px] sm:text-[18px] outline-none bg-white sm:pr-[180px] max-sm:pr-6 transition-all focus:border-dark-green"
                       required
                     />
-                    <Button
-                      css=" bg-green text-white font-vietnam font-bold text-[16px] sm:text-[18px] px-[30px] py-[11px] rounded-full hover:bg-dark-green transition-colors absolute right-[6px] top-1/2 -translate-y-1/2
-                      "
-                    >
+                    <Button css="bg-green text-white font-vietnam font-bold text-[16px] px-[30px] py-[13px] rounded-full hover:bg-dark-green transition-colors sm:absolute sm:right-[6px] sm:top-1/2 sm:-translate-y-1/2 max-sm:w-full">
                       SUBSCRIBE
                     </Button>
                   </div>
                 </div>
-                <p className="text-[12px] font-vietnam font-lighttext-dark mt-3">
+                <p className="text-[12px] font-vietnam font-light text-dark mt-3 max-sm:text-center max-sm:px-2">
                   We respect your privacy. Your email address will only be used
                   to send you updates and offers. We do not sell or share your
                   information with third parties.
@@ -211,7 +207,7 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className=" w-[480px] h-[564px] max-[1920px]:w-[480em] max-[1920px]:h-[564em] absolute bottom-0 left-[10%] max-2xl:left-0 max-xl:hidden">
+          <div className="w-[480px] h-[564px] max-[1920px]:w-[480em] max-[1920px]:h-[564em] absolute bottom-0 left-[10%] max-2xl:left-0 max-xl:hidden">
             <Image src={images.horse} alt="" css="w-full" />
           </div>
         </div>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,4 +8,13 @@
 /* Add any additional global styles here */
 body {
   @apply m-0 p-0 text-[0.0520833vw]
+}
+
+@layer utilities {
+        /* .l-shape {
+            width: 90vw;
+            height: 60vw;
+            background: #4caf50;
+            clip-path: path("M 150 50 Q 50 50 50 150 L 50 700 Q 50 750 100 750 L 1050 750 Q 1150 750 1150 650 L 1150 500 Q 1150 450 1100 450 L 700 450 Q 650 450 650 400 L 650 150 Q 650 50 550 50 Z");
+        } */
 }

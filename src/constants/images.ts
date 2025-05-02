@@ -2,7 +2,7 @@ export const images = {
   animal_lover: require("../assets/images/animal_lover.avif"),
   puppy: require("../assets/images/cute_puppy.avif"),
   horse: require("../assets/images/horse.avif"),
-  man_buyer: require("../assets/images/man_buyer.svg").default,
+  man_buyer: require("../assets/images/man_buyer.avif"),
   horse_with_woman: require("../assets/images/horse_with_woman.avif"),
   puppy_with_woman: require("../assets/images/puppy_with_woman.avif"),
   animal_group: require("../assets/images/animal_group.avif"),

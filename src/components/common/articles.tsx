@@ -90,7 +90,7 @@ export default function Slider({ slides }: SliderProps) {
   }, [index, isTransitioning, extendedSlides.length, total, visibleCount]);
 
   // Calculate translateX
-  const gap = 32; // px
+  const gap = 48; // px
   const baseTranslate = -(index * (slideWidth + gap));
 
   // Responsive slide width
