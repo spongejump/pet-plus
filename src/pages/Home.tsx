@@ -194,9 +194,9 @@ export const Home = () => {
                       className="w-full px-6 py-4 rounded-full border-2 border-green text-[16px] sm:text-[18px] outline-none bg-white sm:pr-[180px] max-sm:pr-6 transition-all focus:border-dark-green"
                       required
                     />
-                    <Button css="bg-green text-white font-vietnam font-bold text-[16px] px-[30px] py-[13px] rounded-full hover:bg-dark-green transition-colors sm:absolute sm:right-[6px] sm:top-1/2 sm:-translate-y-1/2 max-sm:w-full">
+                    <button className="bg-green text-white font-vietnam font-bold text-[16px] px-[30px] py-[14px] rounded-full hover:bg-dark-green transition-colors sm:absolute sm:right-[6px] sm:top-1/2 sm:-translate-y-1/2 max-sm:w-full">
                       SUBSCRIBE
-                    </Button>
+                    </button>
                   </div>
                 </div>
                 <p className="text-[12px] font-vietnam font-light text-dark mt-3 max-sm:text-center max-sm:px-2">
