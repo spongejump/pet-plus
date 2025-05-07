@@ -1,6 +1,10 @@
 import { Button } from "../components/common/button";
 import { Image } from "../components/common/Image";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { images } from "../constants/images";
 import { animals } from "../constants/animals";
 import { slides } from "../constants/slides";
@@ -11,8 +15,70 @@ const Stand = lazy(() => import("../components/common/stand"));
 const Slider = lazy(() => import("../components/common/articles"));
 
 export const Home = () => {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+  const container = useRef(null);
+
+  useGSAP(() => {
+    // Initial container animation
+    gsap.from(container.current, {
+      opacity: 0,
+    });
+
+    // Common animation settings for all images
+    const imageAnimation = {
+      y: 400,
+      opacity: 0,
+      duration: 3,
+      ease: "elastic.out",
+    };
+
+    // Common scroll trigger settings
+    const scrollTriggerSettings = {
+      toggleActions: "play reverse play reverse", // This makes it work both ways
+      start: "top bottom",
+      end: "bottom top",
+    };
+
+    // Animal lover image animation
+    gsap.from(".animal-lover-img", {
+      scrollTrigger: {
+        trigger: ".animal-lover-img",
+        ...scrollTriggerSettings,
+      },
+      ...imageAnimation,
+    });
+
+    // Man buyer image animation
+    gsap.from(".man-buyer-img", {
+      scrollTrigger: {
+        trigger: ".man-buyer-img",
+        ...scrollTriggerSettings,
+      },
+      ...imageAnimation,
+    });
+
+    // Animal group image animation
+    gsap.from(".animal-group-img", {
+      scrollTrigger: {
+        trigger: ".animal-group-img",
+        ...scrollTriggerSettings,
+      },
+      ...imageAnimation,
+    });
+
+    // Horse image animation
+    gsap.from(".horse-img", {
+      scrollTrigger: {
+        trigger: ".horse-img",
+        ...scrollTriggerSettings,
+      },
+      ...imageAnimation,
+    });
+  }, []);
+
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden" ref={container}>
       <div className="container mx-auto px-12  max-lg:px-9 max-sm:px-4 pt-[112em]">
         <div className="flex justify-between items-center gap-[88px] max-xl:gap-[40px] max-md:flex-col  max-md:items-center">
           <div className="max-md:flex max-md:flex-col max-md:items-center">
@@ -33,13 +99,13 @@ export const Home = () => {
           </div>
 
           <div className="flex justify-center items-end relative">
-            <Image src={images.animal_lover} css="" alt="" />
+            <Image src={images.animal_lover} css="animal-lover-img" alt="" />
           </div>
         </div>
       </div>
       <div className="container mx-auto px-12 max-lg:px-9 max-sm:px-4  pt-[360px] max-[1920px]:pt-[360em] pb-[340px] max-[1920px]:pb-[340em]  relative">
         <div className="absolute  w-[1110px] h-[905px] max-[1920px]:w-[1110em] max-[1920px]:h-[905em]  bottom-0  translate-y-[10%] max-[1920px]:left-12 max-lg:left-[48em]  z-30 max-md:hidden">
-          <Image src={images.man_buyer} alt="" css="w-full" />
+          <Image src={images.man_buyer} alt="" css="w-full man-buyer-img" />
           <ArrowButton css="absolute bottom-0 right-0 -translate-y-[20%] -translate-x-[20%]" />
         </div>
         <div className="flex max-md:flex-col max-md:gap-10">
@@ -118,7 +184,7 @@ export const Home = () => {
             </Button>
           </div>
           <div className=" flex justify-center items-center relative">
-            <Image src={images.animal_group} alt="" />
+            <Image src={images.animal_group} alt="" css="animal-group-img" />
           </div>
         </div>
       </div>
@@ -208,7 +274,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="w-[480px] h-[564px] max-[1920px]:w-[480em] max-[1920px]:h-[564em] absolute bottom-0 left-[10%] max-2xl:left-0 max-xl:hidden">
-            <Image src={images.horse} alt="" css="w-full" />
+            <Image src={images.horse} alt="" css="w-full horse-img" />
           </div>
         </div>
       </div>
